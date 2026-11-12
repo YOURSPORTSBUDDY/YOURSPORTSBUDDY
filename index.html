@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>YourSportBuddy — Beta v3.1.2</title>
+<title>YourSportBuddy — Beta v3.2.0</title>
 <style>
   :root{ --ink:#161513; --mut:#6E6A5C; --bg:#F2EFE4; --card:#FFFFFF; --acc:#FF4D14; --lime:#D9F450; --teal:#D9F450; --line:#E3DDCB; --ok:#1B9E4B; --bad:#D64545; }
   *{box-sizing:border-box; margin:0; padding:0;}
@@ -126,7 +126,7 @@
 </style>
 </head>
 <body>
-<div style="position:fixed;bottom:6px;right:10px;font-size:11px;font-weight:700;color:#B9C0C9;z-index:60;pointer-events:none">YSB beta v3.1.2</div>
+<div style="position:fixed;bottom:6px;right:10px;font-size:11px;font-weight:700;color:#B9C0C9;z-index:60;pointer-events:none">YSB beta v3.2.0</div>
 <noscript><div style="background:#D64545;color:#fff;padding:14px;font-family:sans-serif;font-weight:700">YourSportBuddy needs JavaScript turned on. Please enable it and refresh.</div></noscript>
 <div id="fatal" style="display:none; position:fixed; top:8px; left:8px; right:8px; z-index:99; background:#FDECEC; color:#8F2626; border-radius:12px; padding:12px 14px; font-size:14px; line-height:1.45; box-shadow:0 4px 14px rgba(0,0,0,.2);"></div>
 <div class="wrap">
@@ -156,7 +156,7 @@
         <div class="ptile">🥾 Hiking</div><div class="ptile">🚴 Cycling</div><div class="ptile">🐾 Dog walks</div>
         <div class="ptile">🥊 Boxing</div><div class="ptile">🏸 Badminton</div><div class="ptile">🏔️ Trips</div>
       </div>
-      <div class="ticker"><div class="tickin">&nbsp;NEW MATCH: ELISE + TOM — TENNIS · ISLINGTON ✦ MIDLANDS TRIP — 3 SPOTS LEFT ✦ COACH ADE — 1,249 PTS ✦ LONDON LAUNCH — JOIN FREE ✦ NEW MATCH: ELISE + TOM — TENNIS · ISLINGTON ✦ MIDLANDS TRIP — 3 SPOTS LEFT ✦ COACH ADE — 1,249 PTS ✦ LONDON LAUNCH — JOIN FREE ✦</div></div>
+      <div class="ticker"><div class="tickin">&nbsp;NEW MATCH: ELISE + TOM — TENNIS · ISLINGTON ✦ MIDLANDS TRIP — 3 SPOTS LEFT ✦ COACH ADE — 1,249 PTS ✦ UK LAUNCH — JOIN FREE ✦ NEW MATCH: ELISE + TOM — TENNIS · ISLINGTON ✦ MIDLANDS TRIP — 3 SPOTS LEFT ✦ COACH ADE — 1,249 PTS ✦ UK LAUNCH — JOIN FREE ✦</div></div>
     </div>
     <div class="card" id="how-box">
       <h2>How it works</h2>
@@ -184,7 +184,7 @@
         <button class="btn" onclick="login()">Log in</button>
         <div class="msg" id="li-msg"></div>
         <button class="btn ghost hide" id="li-resend" onclick="resend()">Resend confirmation email</button>
-        <p class="mut" style="margin-top:12px">Beta is London-only, 18+. Screens aren't real life — let's get you outside. 🐾</p>
+        <p class="mut" style="margin-top:12px">Beta is UK-wide, 18+. Screens aren't real life — let's get you outside. 🐾</p>
       </div>
       <div id="f-up" class="hide">
         <label>Email</label><input type="email" id="su-email" placeholder="you@email.com">
@@ -210,24 +210,97 @@
       <label>Full name</label><input type="text" id="st-name" maxlength="40" placeholder="Your name">
       <label>Gender</label>
       <select id="st-gender"><option value="">Prefer not to say</option><option>Man</option><option>Woman</option></select>
-      <label>Your London borough</label>
+      <label>Your city or town</label>
       <input type="text" id="st-borough" list="boro" placeholder="Start typing...">
       <datalist id="boro">
-        <option>Barking and Dagenham</option><option>Barnet</option><option>Bexley</option>
-        <option>Brent</option><option>Bromley</option><option>Camden</option><option>City of London</option>
-        <option>Croydon</option><option>Ealing</option><option>Enfield</option><option>Greenwich</option>
-        <option>Hackney</option><option>Hammersmith and Fulham</option><option>Haringey</option>
-        <option>Harrow</option><option>Havering</option><option>Hillingdon</option><option>Hounslow</option>
-        <option>Islington</option><option>Kensington and Chelsea</option><option>Kingston upon Thames</option>
-        <option>Lambeth</option><option>Lewisham</option><option>Merton</option><option>Newham</option>
-        <option>Redbridge</option><option>Richmond upon Thames</option><option>Southwark</option>
-        <option>Sutton</option><option>Tower Hamlets</option><option>Waltham Forest</option>
-        <option>Wandsworth</option><option>Westminster</option>
+        <option>Aberdeen</option>
+        <option>Bangor</option>
+        <option>Bath</option>
+        <option>Belfast</option>
+        <option>Birmingham</option>
+        <option>Blackburn</option>
+        <option>Bolton</option>
+        <option>Bournemouth</option>
+        <option>Bradford</option>
+        <option>Brighton</option>
+        <option>Bristol</option>
+        <option>Cambridge</option>
+        <option>Cardiff</option>
+        <option>Chester</option>
+        <option>Colchester</option>
+        <option>Coventry</option>
+        <option>Crawley</option>
+        <option>Derby</option>
+        <option>Doncaster</option>
+        <option>Dundee</option>
+        <option>Dunfermline</option>
+        <option>Eastbourne</option>
+        <option>Edinburgh</option>
+        <option>Exeter</option>
+        <option>Glasgow</option>
+        <option>Gloucester</option>
+        <option>Harrogate</option>
+        <option>Hastings</option>
+        <option>Hemel Hempstead</option>
+        <option>Huddersfield</option>
+        <option>Inverness</option>
+        <option>Ipswich</option>
+        <option>Kingston upon Hull</option>
+        <option>Leeds</option>
+        <option>Leicester</option>
+        <option>Lisburn</option>
+        <option>Liverpool</option>
+        <option>London</option>
+        <option>Londonderry (Derry)</option>
+        <option>Luton</option>
+        <option>Maidstone</option>
+        <option>Manchester</option>
+        <option>Mansfield</option>
+        <option>Milton Keynes</option>
+        <option>Newcastle upon Tyne</option>
+        <option>Newry</option>
+        <option>Newport</option>
+        <option>Northampton</option>
+        <option>Norwich</option>
+        <option>Nottingham</option>
+        <option>Nuneaton</option>
+        <option>Oxford</option>
+        <option>Paisley</option>
+        <option>Perth</option>
+        <option>Peterborough</option>
+        <option>Plymouth</option>
+        <option>Poole</option>
+        <option>Portsmouth</option>
+        <option>Preston</option>
+        <option>Reading</option>
+        <option>Rotherham</option>
+        <option>Salford</option>
+        <option>Sheffield</option>
+        <option>Slough</option>
+        <option>Southampton</option>
+        <option>Southend-on-Sea</option>
+        <option>St Albans</option>
+        <option>Stirling</option>
+        <option>Stoke-on-Trent</option>
+        <option>Sunderland</option>
+        <option>Swansea</option>
+        <option>Swindon</option>
+        <option>Telford</option>
+        <option>Wakefield</option>
+        <option>Walsall</option>
+        <option>Warrington</option>
+        <option>Watford</option>
+        <option>West Bromwich</option>
+        <option>Wigan</option>
+        <option>Woking</option>
+        <option>Wolverhampton</option>
+        <option>Wrexham</option>
+        <option>York</option>
       </datalist>
       <label>Pick your sports &amp; activities <span class="mut">(tap all that apply)</span></label>
       <div class="chips" id="st-chips"></div>
       <label>Short bio <span class="mut">(who are you? what do you want to do?)</span></label>
-      <textarea id="st-bio" maxlength="300" placeholder="e.g. New to London, looking for weekend tennis and gym buddies. I cycle everywhere."></textarea>
+      <textarea id="st-bio" maxlength="300" placeholder="e.g. New to Manchester, looking for weekend tennis and gym buddies. I cycle everywhere."></textarea>
       <label>🎁 Invite code <span class="mut">(optional — a friend's code = 50 bonus pts for you)</span></label>
       <input type="text" id="st-ref" maxlength="12" placeholder="e.g. A1B2C3D4" style="text-transform:uppercase">
     </div>
@@ -286,7 +359,7 @@
     <div class="card hide" id="ed-card">
       <h2>Edit profile</h2>
       <label>Full name</label><input type="text" id="ed-name" maxlength="40">
-      <label>Your London borough</label>
+      <label>Your city or town</label>
       <input type="text" id="ed-borough" list="boro" placeholder="Start typing...">
       <label>Sports &amp; activities <span class="mut">(tap all that apply)</span></label>
       <div class="chips" id="ed-chips"></div>
@@ -310,7 +383,7 @@
       <input type="text" id="ed-dognotes" maxlength="120" placeholder="Note (anything else about your dog)">
       <div class="row" style="margin-top:14px;align-items:flex-start">
         <input type="checkbox" id="ed-hidearea" style="margin-top:3px">
-        <p class="mut">Hide my area — show "London" instead of my borough on my card.</p>
+        <p class="mut">Hide my area — show just "UK" instead of my town on my card.</p>
       </div>
       <div class="msg" id="ed-msg"></div>
       <button class="btn" onclick="saveProfile()">Save profile</button>
@@ -515,7 +588,7 @@ const SCREENS=['scr-land','scr-auth','scr-setup','scr-pending','scr-rejected','s
 const BP_PRICE='£9.99', BP_DAYS=92, FOUNDING_CAP=500;
 const BP_LINK=''; // ← paste your Stripe Payment Link URL here (one-time £9.99, redirect: your YSB web address + ?bp=1 — works on any host)
 const WEEK_CAP=7*86400000;
-/* ---- v3.1.2 STRIPE SELF-SERVE: the boss pastes the payment link in the admin panel — no rebuilds ever ---- */
+/* ---- v3.2.0 STRIPE SELF-SERVE: the boss pastes the payment link in the admin panel — no rebuilds ever ---- */
 let BP_LINK_LIVE='';
 async function loadBpLink(){
   try{
@@ -714,7 +787,7 @@ async function submitSetup(){
   const name=$('st-name').value.trim(), boro=$('st-borough').value.trim(), bio=$('st-bio').value.trim();
   const live=PHOTOS.filter(function(p){return p.live;}).length;
   if(!name) return msg('st-msg','Add your name.');
-  if(!boro) return msg('st-msg','Add your London borough.');
+  if(!boro) return msg('st-msg','Add your city or town.');
   if(PHOTOS.length<5) return msg('st-msg','You need at least 5 photos — add more from your gallery.');
   if(live<2) return msg('st-msg','You need at least 2 LIVE photos. Tap "Turn camera on" and capture them now.');
   const btn=$('st-submit'); btn.disabled=true; btn.textContent='Uploading…';
@@ -775,7 +848,7 @@ async function renderHome(){
   if(PROF.is_admin){ renderAdmin(); } else { $('admin-box').innerHTML=''; }
   const urls=await userPhotos(ME.id);
   const verified=(PROF.live_count||0)>=2 && PROF.status==='approved';
-  const area=PROF.hide_area? 'London · area hidden' : (PROF.borough||'London');
+  const area=PROF.hide_area? 'UK · area hidden' : (PROF.borough||'UK');
   const acts=(PROF.activities||[]).map(function(a){ return '<span class="tagchip">'+esc(a)+'</span>'; }).join(' ');
   const vibes=(PROF.vibe||[]).map(function(v){ return '<span class="tagchip">'+esc(v)+'</span>'; }).join(' ');
   const av=PROF.availability? '<span class="tagchip">📅 '+esc(PROF.availability)+'</span>' : '';
@@ -994,6 +1067,8 @@ async function startDeck(){
     }catch(e){}
     rows=rows.filter(function(r){ return !SWIPED.has(r.id); });
     for(let i=rows.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); const t=rows[i]; rows[i]=rows[j]; rows[j]=t; }
+    if(PROF && PROF.borough){ const same=rows.filter(function(r){return r.borough===PROF.borough;});
+      if(same.length>0 && same.length<rows.length){ const rest=rows.filter(function(r){return r.borough!==PROF.borough;}); rows=same.concat(rest); } }
     DECK=rows; DECKI=0;
     badge();
     renderTop();
@@ -1019,7 +1094,7 @@ async function renderTop(){
   area.innerHTML='<div class="tcard" id="topcard">'
     +'<img class="phmain" id="topimg" alt="">'
     +'<div class="dots" id="topdots"></div>'
-    +'<div class="cinfo"><div class="phead"><b style="font-size:18px">'+esc(r.full_name||'Buddy')+'</b>'+(r.buddy_pass_until && new Date(r.buddy_pass_until)>new Date()?'<span class="vpill" style="background:var(--lime)">🐾</span>':'')+rateTxt(r.id)+'<span class="pill">'+esc(r.hide_area? 'London · area hidden' : (r.borough||'London'))+ageOf(r.dob)+'</span></div>'
+    +'<div class="cinfo"><div class="phead"><b style="font-size:18px">'+esc(r.full_name||'Buddy')+'</b>'+(r.buddy_pass_until && new Date(r.buddy_pass_until)>new Date()?'<span class="vpill" style="background:var(--lime)">🐾</span>':'')+rateTxt(r.id)+'<span class="pill">'+esc(r.hide_area? 'UK · area hidden' : (r.borough||'UK'))+ageOf(r.dob)+'</span></div>'
     +(r.bio?'<p class="mut" style="margin-top:6px">'+esc(r.bio)+'</p>':'')
     +'<div style="margin-top:8px">'+(r.activities||[]).map(function(a){return '<span class="tagchip">'+esc(a)+'</span>';}).join(' ')+'</div>'
     +((((r.vibe&&r.vibe.length)||r.skill_level||r.availability))?'<div style="margin-top:6px">'+(r.vibe||[]).map(function(v){return '<span class="tagchip">'+esc(v)+'</span>';}).join(' ')+(r.skill_level?'<span class="tagchip">🎯 '+esc(r.skill_level)+'</span>':'')+(r.availability?'<span class="tagchip">📅 '+esc(r.availability)+'</span>':'')+'</div>':'')
@@ -1071,7 +1146,7 @@ function showDetails(){
     +(r.dog_walk_times?'<p class="mut" style="margin-top:4px">Walks: '+esc(r.dog_walk_times)+'</p>':'')
     +(r.dog_notes?'<p class="mut" style="margin-top:4px">'+esc(r.dog_notes)+'</p>':'')+'</div>'; }
   const agestr=(ageOf(r.dob)?' · '+ageOf(r.dob).replace(' · ',''):'');
-  $('det-body').innerHTML='<div class="phead"><b style="font-size:19px">'+esc(r.full_name||'Buddy')+agestr+'</b>'+(r.buddy_pass_until && new Date(r.buddy_pass_until)>new Date()?'<span class="vpill" style="background:var(--lime);margin-left:6px">🐾 PASS</span>':'')+rateTxt(r.id)+'<span class="pill">'+esc(r.hide_area?'London · area hidden':(r.borough||'London'))+'</span></div>'
+  $('det-body').innerHTML='<div class="phead"><b style="font-size:19px">'+esc(r.full_name||'Buddy')+agestr+'</b>'+(r.buddy_pass_until && new Date(r.buddy_pass_until)>new Date()?'<span class="vpill" style="background:var(--lime);margin-left:6px">🐾 PASS</span>':'')+rateTxt(r.id)+'<span class="pill">'+esc(r.hide_area?'UK · area hidden':(r.borough||'UK'))+'</span></div>'
     +(r.bio?'<p style="margin-top:8px">'+esc(r.bio)+'</p>':'')
     +(acts?'<div class="chips" style="margin-top:8px">'+acts+'</div>':'')
     +(vibes?'<div class="chips" style="margin-top:6px">'+vibes+'</div>':'')
@@ -1202,7 +1277,7 @@ async function openMatches(){
       box.insertAdjacentHTML('beforeend','<div class="mrow" onclick="openChat(\''+m.id+'\')">'
         +'<img src="'+(urls[0]||'')+'" alt="">'
         +'<div style="flex:1;min-width:0"><b>'+esc(p.full_name||'Buddy')+'</b>'
-        +'<span class="pill" style="margin-left:6px">'+esc(p.hide_area? 'London' : (p.borough||''))+ageOf(p.dob)+'</span>'
+        +'<span class="pill" style="margin-left:6px">'+esc(p.hide_area? 'UK' : (p.borough||''))+ageOf(p.dob)+'</span>'
         +((p.live_count||0)>=2?'<span class="vpill" style="margin-left:6px">✓ LIVE</span>':'')
         +rateTxt(oid)
         +(quotaLock(MT,m.id).locked?'<span class="vpill" style="margin-left:6px;background:#FDECEC;color:#8F2626">🔒 waits</span>':'')
@@ -1474,7 +1549,7 @@ async function renderLead(){
       return '<div class="mrow" style="cursor:default;margin-bottom:8px;padding:8px 10px;'+(me?'background:#FBFFF0;border-color:var(--ink)':'')+'">'
         +'<span style="font-weight:900;width:26px;flex:0 0 26px;text-align:center">'+medal+'</span>'
         +'<div style="flex:1;min-width:0"><b>'+esc(p.full_name||'Buddy')+(me?' (you)':'')+'</b>'
-        +'<p class="mut" style="font-size:12px;margin-top:1px">'+esc(p.borough||'London')+'</p></div>'
+        +'<p class="mut" style="font-size:12px;margin-top:1px">'+esc(p.borough||'UK')+'</p></div>'
         +'<span class="vpill" style="background:#FFF0E4;color:#9A4B12">⭐ '+(p.points||0)+'</span></div>';
     }).join('');
   }catch(e){
